@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+      .nut-btn{
+        background-color: blue;
+        width: 50px;
+        height: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Nut!</h1>
+    <div class="nut-btn">
+        good
+    </div>
+    <audio src="./sounds/nut.mp3"></audio> 
+    <script>
+      document.querySelector('div.nut-btn').addEventListener('click', () => {
+        document.querySelector('audio').play();
+      })
+    </script>
+  </body>
+</html>
