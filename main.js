@@ -11,7 +11,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 250,
     height: 250,
-    frame: false,
+    frame: true,
     resizable: false,
     maximizable: false,
     titleBarStyle: "hiddenInset",
@@ -19,6 +19,7 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  mainWindow.removeMenu()
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
