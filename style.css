@@ -1,4 +1,4 @@
-html, body{
+html, body {
     background-color: rgb(51, 255, 0);
     width: 100%;
     height: 100%;
@@ -12,7 +12,7 @@ html, body{
     align-items: center;
 }
 
-.nut-btn{
+.nut-btn {
     width: 85vmin;
     height: 85vmin;
     margin: auto;
@@ -26,7 +26,22 @@ html, body{
     justify-content: center;
 }
 
+.nut-btn {
+
+}
+
 audio {
     width: 0;
     height: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+    html, body{
+        background-color: #222222;
+    }
+
+    .nut-btn {
+        background-color: #d351f3;
+    }
+  }
+  
