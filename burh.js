@@ -1,4 +1,8 @@
+let inBruhMode = false;
+let playing = false;
 const activeBruhMode = () => {
+    inBruhMode = true;
+    playing = true;
     document.removeEventListener('keydown', konami);
     const bruh = document.querySelector('.content > .nut-btn');
     bruh.innerText = 'Activating Bruh Mode ...';
@@ -10,9 +14,18 @@ const activeBruhMode = () => {
     bruhMomento.play();
     bruhMomento.addEventListener('ended', () => {
         bruh.innerText = 'BRUH';
+        playing = false;
     });
 }
 
+const deactivateBruhMode = () => {
+    inBruhMode = false;
+    document.removeEventListener('keydown', konami);
+    const bruh = document.querySelector('.content > .nut-btn');
+    bruh.innerText = 'NUT';
+    const bruhdio = document.querySelector('.content > audio');
+    bruhdio.src = './sounds/nut.mp3';
+}
 
 const konamiCode = [
     "ArrowUp",
@@ -109,8 +122,10 @@ function konami(e) {
 }
 
 function makeMistake() {
+    if(playing) return;
     document.head.innerHTML += mistake;
-    activeBruhMode();
+    if(!inBruhMode) activeBruhMode();
+    else deactivateBruhMode();
 }
 
 document.addEventListener('keyup', konami);
