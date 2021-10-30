@@ -1,7 +1,7 @@
-const ipcRenderer = window.ipcRenderer;
+const ipcRenderer = window.electron.ipcRenderer;
 
 document.addEventListener('load', () => {
-    if(window.os === 'darwin') {
+    if(window.electron.os === 'darwin') {
         document.querySelector('.title-bar').hidden = true;
     }
 });

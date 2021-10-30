@@ -5,6 +5,7 @@
     <title>Hello World!</title>
     <link rel="stylesheet" href="titlebar.css">
     <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
   </head>
   <body>
     <!-- souce: https://codepen.io/agrimsrud/pen/WGgRPP -->
@@ -23,11 +24,7 @@
       <audio src="./sounds/nut.mp3"></audio> 
     </div>
 
-    <script>
-      document.querySelector('div.nut-btn').addEventListener('click', () => {
-        document.querySelector('audio').play();
-      })
-    </script>
+    <script src="./play.js"></script>
     <script src="./titlebar.js"></script>
   </body>
 </html>
