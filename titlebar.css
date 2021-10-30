@@ -8,6 +8,7 @@
     flex-direction: row;
     justify-content: flex-end;
     -webkit-app-region: drag;
+    -webkit-user-select: none;
 }
 
 .ui-titleicon {
@@ -29,6 +30,9 @@
     max-width: 100px;
     max-height: 32px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    -webkit-app-region: no-drag;
 }
 
 .ui-btn {

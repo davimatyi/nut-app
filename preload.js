@@ -15,4 +15,4 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 window.os = os.platform();
-window.ipcRenderer = electron.ipcRenderer;
+Object.defineProperty(window, 'ipcRenderer', electron.ipcRenderer)
