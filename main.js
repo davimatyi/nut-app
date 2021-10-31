@@ -16,7 +16,7 @@ function createWindow () {
     maximizable: false,
     titleBarStyle: "hiddenInset",
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      preload: path.join(__dirname, 'src', 'scripts' , 'preload.js'),
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true
@@ -27,7 +27,7 @@ function createWindow () {
   mainWindow.webContents.openDevTools()
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

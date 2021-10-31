@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hellvetica';
-    src: url('./Hellvetica.ttf')
+    src: url('../../resources/Hellvetica.ttf')
   }
 
 body, html {
