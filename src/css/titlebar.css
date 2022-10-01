@@ -11,6 +11,10 @@
     -webkit-user-select: none;
 }
 
+.title-bar.mac {
+    background-color: rgb(51, 255, 0);
+}
+
 .ui-titleicon {
     flex-grow: 1;
     max-width: 32px;
