@@ -1,8 +1,9 @@
 const ipcRenderer = window.electron.ipcRenderer;
 
-document.addEventListener('load', () => {
+window.addEventListener('load', () => {
     if(window.electron.os === 'darwin') {
-        document.querySelector('.title-bar').hidden = true;
+        console.log('macOS detected');
+        document.querySelector('.title-bar').style.display = 'none';
     }
 });
 
