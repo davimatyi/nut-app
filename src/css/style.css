@@ -40,9 +40,14 @@ body, html {
     text-align: center;
 }
 
-.nut-btn:hover {
+/* .nut-btn:hover {
     animation: bounce 1s;
+} */
+
+.animate {
+  animation: bounce 1s;
 }
+
 
 @keyframes bounce {
     0%, 20%, 60%, 100% {
